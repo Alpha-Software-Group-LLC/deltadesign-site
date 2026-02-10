@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delta Design LLC - Custom Fabrication & 3D Printing</title>
+  <meta name="description" content="Custom fabrication, 3D printing, and CNC milling services. From concept to reality.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    .gradient-red {
+      background: linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%);
+    }
+    
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(220, 38, 38, 0.3);
+    }
+    
+    .delta-pattern {
+      background-image: 
+        linear-gradient(45deg, rgba(220, 38, 38, 0.05) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(220, 38, 38, 0.05) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(220, 38, 38, 0.05) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(220, 38, 38, 0.05) 75%);
+      background-size: 40px 40px;
+      background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-black bg-opacity-95 backdrop-blur-sm z-50 border-b border-red-900">
+    <div class="max-w-7xl mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <a href="#home" class="text-2xl font-bold flex items-center gap-2">
+          <span class="text-red-600">▲</span>
+          <span>DELTA DESIGN</span>
+        </a>
+        <div class="hidden md:flex gap-8">
+          <a href="#services" class="hover:text-red-500 transition-colors">Services</a>
+          <a href="#portfolio" class="hover:text-red-500 transition-colors">Portfolio</a>
+          <a href="#about" class="hover:text-red-500 transition-colors">About</a>
+          <a href="#contact" class="hover:text-red-500 transition-colors">Contact</a>
+        </div>
+        <a href="#contact" class="hidden md:block bg-red-600 px-6 py-2 rounded font-bold hover:bg-red-700 transition-colors">
+          Get Quote
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center px-4 pt-20 delta-pattern">
+    <div class="max-w-6xl mx-auto text-center fade-in">
+      <div class="text-9xl mb-6 text-red-600">▲</div>
+      <h1 class="text-6xl md:text-8xl font-black mb-6">
+        DELTA DESIGN
+      </h1>
+      <p class="text-2xl md:text-3xl mb-8 text-gray-400">
+        Custom Fabrication & 3D Printing
+      </p>
+      <p class="text-xl md:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto">
+        From concept to reality. Precision manufacturing, rapid prototyping, and custom fabrication solutions.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-16">
+        <a href="#contact" class="gradient-red px-8 py-4 rounded font-bold text-lg hover:scale-105 transition-all shadow-2xl">
+          Request Quote →
+        </a>
+        <a href="#portfolio" class="bg-gray-900 border-2 border-red-600 px-8 py-4 rounded font-bold text-lg hover:bg-gray-800 transition-all">
+          View Work
+        </a>
+      </div>
+      
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-4xl mx-auto">
+        <div class="bg-gray-900 bg-opacity-50 rounded-xl p-4 border border-red-900">
+          <div class="text-3xl font-bold text-red-500">10+</div>
+          <div class="text-sm text-gray-400 mt-2">Years Experience</div>
+        </div>
+        <div class="bg-gray-900 bg-opacity-50 rounded-xl p-4 border border-red-900">
+          <div class="text-3xl font-bold text-red-500">24hr</div>
+          <div class="text-sm text-gray-400 mt-2">Turnaround</div>
+        </div>
+        <div class="bg-gray-900 bg-opacity-50 rounded-xl p-4 border border-red-900">
+          <div class="text-3xl font-bold text-red-500">100%</div>
+          <div class="text-sm text-gray-400 mt-2">Custom</div>
+        </div>
+        <div class="bg-gray-900 bg-opacity-50 rounded-xl p-4 border border-red-900">
+          <div class="text-3xl font-bold text-red-500">∞</div>
+          <div class="text-sm text-gray-400 mt-2">Possibilities</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 px-4 bg-gray-950">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-5xl md:text-6xl font-black mb-4 text-center">Services</h2>
+      <p class="text-xl text-gray-400 text-center mb-16">Precision manufacturing for your vision</p>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- 3D Printing -->
+        <div class="bg-gray-900 rounded-2xl p-8 hover-lift border border-red-900">
+          <div class="text-5xl mb-4">🖨️</div>
+          <h3 class="text-3xl font-bold mb-4">3D Printing</h3>
+          <p class="text-gray-400 mb-6">
+            Rapid prototyping and custom parts with precision FDM and resin printing.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Functional Prototypes</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Custom Parts & Components</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">One-offs to Small Batch Production</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Multiple Materials Available</span>
+            </div>
+          </ul>
+        </div>
+
+        <!-- CNC Milling -->
+        <div class="bg-gray-900 rounded-2xl p-8 hover-lift border border-red-900">
+          <div class="text-5xl mb-4">⚙️</div>
+          <h3 class="text-3xl font-bold mb-4">CNC Milling</h3>
+          <p class="text-gray-400 mb-6">
+            Precision machining for signage, parts, and custom components.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Custom Signage & Branding</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Precision Parts Machining</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Wood, Metal, Acrylic & More</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Tight Tolerances</span>
+            </div>
+          </ul>
+        </div>
+
+        <!-- Custom Fabrication -->
+        <div class="bg-gray-900 rounded-2xl p-8 hover-lift border border-red-900">
+          <div class="text-5xl mb-4">🔧</div>
+          <h3 class="text-3xl font-bold mb-4">Custom Fabrication</h3>
+          <p class="text-gray-400 mb-6">
+            Bespoke fabrication services for unique projects and installations.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">One-of-a-Kind Builds</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Mixed Material Assembly</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Small Run Production</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Installation Support</span>
+            </div>
+          </ul>
+        </div>
+
+        <!-- Product Design -->
+        <div class="bg-gray-900 rounded-2xl p-8 hover-lift border border-red-900">
+          <div class="text-5xl mb-4">📐</div>
+          <h3 class="text-3xl font-bold mb-4">Product Design</h3>
+          <p class="text-gray-400 mb-6">
+            From sketch to CAD to reality. We bring your ideas to life.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Concept Development</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">3D CAD Modeling</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Design for Manufacturing</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span class="text-gray-300">Iterative Prototyping</span>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-5xl md:text-6xl font-black mb-4 text-center">Portfolio</h2>
+      <p class="text-xl text-gray-400 text-center mb-16">Selected work from our fabrication lab</p>
+      
+      <!-- Portfolio Grid - Placeholder for now -->
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        {/* Portfolio items will be added here */}
+        <div class="bg-gray-900 rounded-2xl p-8 border border-red-900 aspect-square flex items-center justify-center">
+          <div class="text-center">
+            <div class="text-6xl mb-4 text-red-600">▲</div>
+            <p class="text-gray-500">Project 1</p>
+            <p class="text-sm text-gray-600">Coming Soon</p>
+          </div>
+        </div>
+        <div class="bg-gray-900 rounded-2xl p-8 border border-red-900 aspect-square flex items-center justify-center">
+          <div class="text-center">
+            <div class="text-6xl mb-4 text-red-600">▲</div>
+            <p class="text-gray-500">Project 2</p>
+            <p class="text-sm text-gray-600">Coming Soon</p>
+          </div>
+        </div>
+        <div class="bg-gray-900 rounded-2xl p-8 border border-red-900 aspect-square flex items-center justify-center">
+          <div class="text-center">
+            <div class="text-6xl mb-4 text-red-600">▲</div>
+            <p class="text-gray-500">Project 3</p>
+            <p class="text-sm text-gray-600">Coming Soon</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <p class="text-gray-500 mb-4">Want to see more examples of our work?</p>
+        <a href="#contact" class="inline-block bg-red-600 px-8 py-3 rounded font-bold hover:bg-red-700 transition-colors">
+          Request Portfolio →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-4 bg-gray-950">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-5xl md:text-6xl font-black mb-16 text-center">The Team</h2>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- Ali -->
+        <div class="bg-gray-900 rounded-2xl p-8 border border-red-900">
+          <div class="text-6xl mb-4">👨‍🎨</div>
+          <h3 class="text-3xl font-bold mb-2">Ali Qureshi</h3>
+          <div class="text-red-500 font-semibold mb-4">Founder & Lead Designer</div>
+          <p class="text-gray-400 mb-4">
+            MIT Masters Graduate in Architecture with 10+ years of experience in architectural design, 
+            3D printing, and digital fabrication.
+          </p>
+          <a href="mailto:alikqureshi@gmail.com" class="text-red-500 hover:text-red-400">alikqureshi@gmail.com</a>
+          <div class="text-gray-500 text-sm mt-1">(561) 809-2851</div>
+        </div>
+
+        <!-- Bilal -->
+        <div class="bg-gray-900 rounded-2xl p-8 border border-red-900">
+          <div class="text-6xl mb-4">👨‍💻</div>
+          <h3 class="text-3xl font-bold mb-2">Bilal Qureshi</h3>
+          <div class="text-red-500 font-semibold mb-4">Co-Founder & Operations</div>
+          <p class="text-gray-400 mb-4">
+            Product Manager and self-taught programmer. Manages operations, client relationships, 
+            and digital infrastructure.
+          </p>
+          <a href="mailto:bilal.k.qureshi@gmail.com" class="text-red-500 hover:text-red-400">bilal.k.qureshi@gmail.com</a>
+          <div class="text-gray-500 text-sm mt-1">(561) 543-2101</div>
+        </div>
+      </div>
+      
+      <!-- Company Story -->
+      <div class="bg-gradient-to-br from-gray-900 to-black rounded-2xl p-8 md:p-12 border border-red-900">
+        <h3 class="text-3xl font-bold mb-6 text-center">About Delta Design</h3>
+        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+          Delta Design LLC was founded to bridge the gap between concept and reality. With a combination 
+          of architectural expertise and technical implementation, we bring ideas to life through precision 
+          fabrication and digital manufacturing.
+        </p>
+        <p class="text-lg text-gray-300 leading-relaxed">
+          From rapid prototyping for startups to custom fabrication for established businesses, we deliver 
+          quality craftsmanship with fast turnaround times. Our lab is equipped with the latest in 3D printing, 
+          CNC milling, and fabrication tools to handle projects of any scale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-4 gradient-red">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-5xl md:text-6xl font-black mb-8">Let's Build Something</h2>
+      <p class="text-xl mb-12">
+        Ready to turn your concept into reality? Get in touch for a quote.
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
+        <a href="mailto:bilal.k.qureshi@gmail.com" class="bg-black bg-opacity-50 backdrop-blur-lg rounded-xl p-6 hover-lift">
+          <div class="text-4xl mb-3">📧</div>
+          <div class="font-bold mb-2">Email</div>
+          <div class="text-sm">bilal.k.qureshi@gmail.com</div>
+          <div class="text-sm mt-1">alikqureshi@gmail.com</div>
+        </a>
+        
+        <a href="tel:5615432101" class="bg-black bg-opacity-50 backdrop-blur-lg rounded-xl p-6 hover-lift">
+          <div class="text-4xl mb-3">📱</div>
+          <div class="font-bold mb-2">Phone</div>
+          <div class="text-sm">(561) 543-2101 - Bilal</div>
+          <div class="text-sm mt-1">(561) 809-2851 - Ali</div>
+        </a>
+      </div>
+      
+      <div class="bg-black bg-opacity-50 backdrop-blur-lg rounded-xl p-8">
+        <h3 class="text-2xl font-bold mb-4">What We Need to Quote Your Project:</h3>
+        <ul class="text-left space-y-2 max-w-xl mx-auto">
+          <li class="flex items-start gap-2">
+            <span class="text-red-300">▲</span>
+            <span>Brief description of your project</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-300">▲</span>
+            <span>Materials preferred (if known)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-300">▲</span>
+            <span>Quantity needed</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-300">▲</span>
+            <span>Timeline / deadline</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-red-300">▲</span>
+            <span>Any CAD files, sketches, or reference images</span>
+          </li>
+        </ul>
+        <p class="text-sm text-gray-400 mt-6">We typically respond within 24 hours with a quote and timeline.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-4 bg-black border-t border-red-900">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="text-center md:text-left">
+          <div class="text-2xl font-bold mb-2 flex items-center gap-2 justify-center md:justify-start">
+            <span class="text-red-600">▲</span>
+            <span>DELTA DESIGN LLC</span>
+          </div>
+          <div class="text-sm text-gray-500">Custom Fabrication & 3D Printing</div>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-6 text-gray-400 text-sm">
+          <a href="#services" class="hover:text-red-500 transition-colors">Services</a>
+          <a href="#portfolio" class="hover:text-red-500 transition-colors">Portfolio</a>
+          <a href="#about" class="hover:text-red-500 transition-colors">About</a>
+          <a href="#contact" class="hover:text-red-500 transition-colors">Contact</a>
+        </div>
+      </div>
+      
+      <div class="text-center text-gray-600 text-sm mt-8">
+        <p>© 2026 Delta Design LLC. All rights reserved.</p>
+        <p class="mt-2">Boca Raton, Florida</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
