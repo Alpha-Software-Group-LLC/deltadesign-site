@@ -6,6 +6,10 @@
   <title>Delta Design LLC - Custom Fabrication & 3D Printing</title>
   <meta name="description" content="Custom fabrication, 3D printing, and CNC milling services. From concept to reality.">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 92'><rect width='100' height='92' fill='black'/><g fill='none' stroke='%23dc2626' stroke-width='11' stroke-linecap='round'><line x1='15.7' y1='74.9' x2='46.3' y2='17.1'/><line x1='53.7' y1='17.1' x2='84.3' y2='74.9'/><line x1='20' y1='82' x2='80' y2='82'/></g></svg>">
   <style>
     html {
       scroll-behavior: smooth;
@@ -42,17 +46,80 @@
       background-size: 40px 40px;
       background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
     }
+
+    /* High-tech rugged type system */
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+
+    .font-brand {
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 0.18em;
+      font-weight: 800;
+    }
+
+    /* Red HUD glow */
+    .glow-red {
+      text-shadow: 0 0 12px rgba(220, 38, 38, 0.55), 0 0 34px rgba(220, 38, 38, 0.30);
+    }
+
+    .logo-glow {
+      filter: drop-shadow(0 0 5px rgba(220, 38, 38, 0.55)) drop-shadow(0 0 16px rgba(220, 38, 38, 0.30));
+    }
+
+    /* Sharper, more aggressive edges on hover */
+    .hover-lift:hover {
+      box-shadow: 0 18px 50px rgba(220, 38, 38, 0.30), inset 0 0 0 1px rgba(220, 38, 38, 0.45);
+    }
+
+    /* HUD scanline texture overlay */
+    .scanlines {
+      background-image: repeating-linear-gradient(
+        0deg,
+        rgba(220, 38, 38, 0.04) 0px,
+        rgba(220, 38, 38, 0.04) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.75; }
+      50% { opacity: 1; }
+    }
+
+    .pulse-glow {
+      animation: pulseGlow 3.5s ease-in-out infinite;
+    }
+
+    /* Sharpen the nav into a HUD bar */
+    nav {
+      box-shadow: 0 1px 0 rgba(220, 38, 38, 0.35), 0 8px 30px rgba(0, 0, 0, 0.6);
+    }
   </style>
 </head>
 <body class="bg-black text-white">
 
+  <!-- Delta Design logo mark (reusable vector) -->
+  <svg width="0" height="0" class="hidden" aria-hidden="true">
+    <symbol id="delta-mark" viewBox="0 0 100 92">
+      <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round">
+        <line x1="15.7" y1="74.9" x2="46.3" y2="17.1"/>
+        <line x1="53.7" y1="17.1" x2="84.3" y2="74.9"/>
+        <line x1="20" y1="82" x2="80" y2="82"/>
+      </g>
+    </symbol>
+  </svg>
+
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-black bg-opacity-95 backdrop-blur-sm z-50 border-b border-red-900">
+  <nav class="fixed top-0 w-full bg-black bg-opacity-95 backdrop-blur-sm z-50 border-b border-red-900 scanlines">
     <div class="max-w-7xl mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
-        <a href="#home" class="text-2xl font-bold flex items-center gap-2">
-          <span class="text-red-600">▲</span>
-          <span>DELTA DESIGN</span>
+        <a href="#home" class="text-xl font-bold flex items-center gap-3">
+          <svg class="w-9 h-9 text-red-600 logo-glow" aria-hidden="true"><use href="#delta-mark"/></svg>
+          <span class="font-brand glow-red">DELTA DESIGN</span>
         </a>
         <div class="hidden md:flex gap-8">
           <a href="#services" class="hover:text-red-500 transition-colors">Services</a>
@@ -71,8 +138,8 @@
   <!-- Hero Section -->
   <section id="home" class="min-h-screen flex items-center justify-center px-4 pt-20 delta-pattern">
     <div class="max-w-6xl mx-auto text-center fade-in">
-      <div class="text-9xl mb-6 text-red-600">▲</div>
-      <h1 class="text-6xl md:text-8xl font-black mb-6">
+      <svg class="w-36 h-36 md:w-52 md:h-52 mx-auto mb-6 text-red-600 logo-glow pulse-glow" aria-hidden="true"><use href="#delta-mark"/></svg>
+      <h1 class="font-brand text-4xl sm:text-5xl md:text-7xl mb-6 glow-red">
         DELTA DESIGN
       </h1>
       <p class="text-2xl md:text-3xl mb-8 text-gray-400">
@@ -466,21 +533,21 @@
         {/* Portfolio items will be added here */}
         <div class="bg-gray-900 rounded-2xl p-8 border border-red-900 aspect-square flex items-center justify-center">
           <div class="text-center">
-            <div class="text-6xl mb-4 text-red-600">▲</div>
+            <svg class="w-16 h-16 mb-4 mx-auto text-red-600 logo-glow" aria-hidden="true"><use href="#delta-mark"/></svg>
             <p class="text-gray-500">Project 1</p>
             <p class="text-sm text-gray-600">Coming Soon</p>
           </div>
         </div>
         <div class="bg-gray-900 rounded-2xl p-8 border border-red-900 aspect-square flex items-center justify-center">
           <div class="text-center">
-            <div class="text-6xl mb-4 text-red-600">▲</div>
+            <svg class="w-16 h-16 mb-4 mx-auto text-red-600 logo-glow" aria-hidden="true"><use href="#delta-mark"/></svg>
             <p class="text-gray-500">Project 2</p>
             <p class="text-sm text-gray-600">Coming Soon</p>
           </div>
         </div>
         <div class="bg-gray-900 rounded-2xl p-8 border border-red-900 aspect-square flex items-center justify-center">
           <div class="text-center">
-            <div class="text-6xl mb-4 text-red-600">▲</div>
+            <svg class="w-16 h-16 mb-4 mx-auto text-red-600 logo-glow" aria-hidden="true"><use href="#delta-mark"/></svg>
             <p class="text-gray-500">Project 3</p>
             <p class="text-sm text-gray-600">Coming Soon</p>
           </div>
@@ -604,9 +671,9 @@
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="text-center md:text-left">
-          <div class="text-2xl font-bold mb-2 flex items-center gap-2 justify-center md:justify-start">
-            <span class="text-red-600">▲</span>
-            <span>DELTA DESIGN LLC</span>
+          <div class="text-2xl font-bold mb-2 flex items-center gap-3 justify-center md:justify-start">
+            <svg class="w-8 h-8 text-red-600 logo-glow" aria-hidden="true"><use href="#delta-mark"/></svg>
+            <span class="font-brand">DELTA DESIGN LLC</span>
           </div>
           <div class="text-sm text-gray-500">Custom Fabrication & 3D Printing</div>
         </div>
