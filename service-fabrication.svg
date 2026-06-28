@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520">
+  <defs>
+    <linearGradient id="bgfab" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161d2b"/><stop offset="1" stop-color="#090d14"/>
+    </linearGradient>
+    <radialGradient id="spark" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fde68a"/><stop offset="0.5" stop-color="#f59e0b"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glowfab" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="520" fill="url(#bgfab)"/>
+  <!-- metal plates / I-beam -->
+  <rect x="250" y="350" width="400" height="34" rx="3" fill="#2b3545" stroke="#6b7280" stroke-width="3"/>
+  <rect x="300" y="384" width="60" height="80" fill="#243042" stroke="#6b7280" stroke-width="3"/>
+  <rect x="540" y="384" width="60" height="80" fill="#243042" stroke="#6b7280" stroke-width="3"/>
+  <!-- weld seam glow -->
+  <ellipse cx="450" cy="350" rx="120" ry="10" fill="#dc2626" opacity="0.35" filter="url(#glowfab)"/>
+  <!-- welding torch -->
+  <g>
+    <rect x="540" y="150" width="150" height="26" rx="10" fill="#374151" stroke="#9ca3af" stroke-width="3" transform="rotate(28 615 163)"/>
+    <rect x="500" y="210" width="30" height="60" rx="6" fill="#9ca3af" transform="rotate(28 515 240)"/>
+    <polygon points="470,300 492,288 500,312" fill="#dc2626"/>
+  </g>
+  <!-- arc / spark burst -->
+  <circle cx="455" cy="346" r="46" fill="url(#spark)" filter="url(#glowfab)"/>
+  <circle cx="455" cy="346" r="14" fill="#fff7ed"/>
+  <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round" filter="url(#glowfab)">
+    <line x1="455" y1="346" x2="400" y2="300"/>
+    <line x1="455" y1="346" x2="520" y2="300"/>
+    <line x1="455" y1="346" x2="390" y2="360"/>
+    <line x1="455" y1="346" x2="525" y2="372"/>
+    <line x1="455" y1="346" x2="430" y2="280"/>
+    <line x1="455" y1="346" x2="480" y2="285"/>
+  </g>
+  <g fill="#fbbf24">
+    <circle cx="395" cy="295" r="3"/><circle cx="528" cy="296" r="3"/>
+    <circle cx="385" cy="364" r="3"/><circle cx="430" cy="275" r="2.5"/>
+    <circle cx="535" cy="378" r="2.5"/>
+  </g>
+</svg>
